@@ -1,0 +1,92 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 2em;
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+.project {
+    margin: 20px 0;
+}
+
+.project h3 {
+    color: #00ffa1;
+    text-shadow: 0 0 10px #00ffa1;
+}
+
+.project a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project a:hover {
+    color: #00d4ff;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9em;
+}
