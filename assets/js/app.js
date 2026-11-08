@@ -27988,36 +27988,7 @@ if (document.querySelector(".youtube")) {
 
 // Contact form is handled by assets/js/email.js.
 
-const submitBtn = document.getElementById("submit-btn");
-window.onload = function () {
-  const contactForm = document.getElementById("contact-form");
-  contactForm &&
-    contactForm.addEventListener("submit", function (event) {
-    
-      event.preventDefault();
 
-      // add template id and service id here
-
-      if(!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY){
-        alert("Please add your service id and template id");
-        return;
-      }
-      submitBtn.innerText = "Sending...";
-      es.sendForm(SERVICE_ID, TEMPLATE_ID, this).then(
-        function () {
-          console.log("SUCCESS!");
-          contactForm.reset();
-          submitBtn.innerText = "Success";
-          setTimeout(function () {
-            submitBtn.innerHTML = `Submit`;
-          }, 3000);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        },
-      );
-    });
-};
 })();
 
 /******/ })()
