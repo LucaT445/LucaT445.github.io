@@ -27942,7 +27942,7 @@ if (document.getElementById("about_me")) {
 
 
 // show project details
-const projects = document.querySelectorAll(".single-project");
+const projects = document.querySelectorAll(".single-project[data-img][data-title]");
 if (projects.length) {
   projects.forEach((project) => {
     project.addEventListener("click", function () {
@@ -27986,14 +27986,8 @@ if (document.querySelector(".youtube")) {
 }
 
 
-// contact form
-(function () {
+// Contact form is handled by assets/js/email.js.
 
-  // add public key here
-  
-  // https://dashboard.emailjs.com/admin/account  
-  es.init(PUBLIC_KEY);
-})();
 const submitBtn = document.getElementById("submit-btn");
 window.onload = function () {
   const contactForm = document.getElementById("contact-form");
