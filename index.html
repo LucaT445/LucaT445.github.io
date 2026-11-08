@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
-    <title>Portify - Personal Portfolio Website Template</title>
+    <title>Luke Thilgen | Portfolio</title>
   <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/accessibility.js"></script>
   <link rel="stylesheet" href="assets/css/index.css?v=4">
   </head>
   <body>
@@ -19,7 +20,7 @@
     <header class="header">
       <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        <button class="bg-transparent border-0 d-xl-none">
+        <button class="bg-transparent border-0 d-xl-none" id="menu-toggle" aria-label="Toggle navigation" aria-controls="navigation" aria-expanded="false">
           <div class="nav-icon">
             <span></span>
             <span></span>
@@ -30,7 +31,7 @@
     </header>
 
     <!-- navigation -->
-    <nav class="navigation" id="navigation">
+    <nav class="navigation" id="navigation" aria-label="Main navigation">
       <img src="./assets/images/logo.png" class="mb-4 d-xl-none" alt="logo" />
       <ul>
         <li class="nav-link">
@@ -57,6 +58,7 @@
     <div class="nav-overlay d-xl-none"></div>
 
     <!-- main content -->
+    <a class="skip-link" href="#top">Skip to content</a>
     <main class="container-fluid">
       <div class="row gx-xxl-6">
         <div class="col col-xl-9" data-bs-spy="scroll" data-bs-target="#navigation">
@@ -69,9 +71,10 @@
                   <h1 class="text-uppercase overflow-hidden developer" id="typewriter"></h1>
                   <p class="description">based in Oakland, California.</p>
                 </div>
-                <div class="d-flex gap-4">
+                <div class="d-flex flex-wrap gap-4">
                   <a href="#experience" class="btn work-btn text-capitalize btn-primary">view my work</a>
                   <a href="#contact" class="btn contact-btn text-capitalize btn-outline-primary">contact me</a>
+                  <a href="assets/Luke-Thilgen-Resume.pdf" class="btn btn-outline-primary">Résumé (PDF)</a>
                 </div>
               </div>
               <div class="col-12 col-md-5 offset-md-1 offset-xxl-2 col-xl-4 d-flex justify-content-center">
@@ -82,7 +85,7 @@
                     <span></span>
                     <span></span>
                   </div>
-                  <img class="img-fluid rounded-circle hero-img" src="./assets/images/my_photo.jpg" alt="" />
+                  <img class="img-fluid rounded-circle hero-img" src="./assets/images/my_photo.jpg" alt="Luke Thilgen" />
                   <div class="waves-bottom">
                     <span></span>
                     <span></span>
@@ -93,7 +96,7 @@
               </div>
               <div class="col-12">
                 <a href="#about_me" class="d-flex gap-4 align-items-center next-chapter mt-5">
-                  <span class="page">01/11</span>
+                  <span class="page">01/05</span>
                   <span class="next">Next Chapter</span>
                   <span class="icon"><i class="ph ph-arrow-elbow-right-down"></i></span>
                 </a>
@@ -105,7 +108,7 @@
           <section id="about_me" class="about section">
             <span class="section-title-overlay-text">About me</span>
             <div class="section-title text-capitalize">
-              <h4>Some Word About me</h4>
+              <h4>A little about me</h4>
               <h2>know me more</h2>
             </div>
             <div class="row mb-4 mb-lg-5 align-items-center">
@@ -147,7 +150,7 @@
             </div>
             <div class="col-12">
               <a href="#attainments" class="d-flex gap-4 align-items-center next-chapter">
-                <span class="page">02/11</span>
+                <span class="page">02/05</span>
                 <span class="next">Next Chapter</span>
                 <span class="icon"><i class="ph ph-arrow-elbow-right-down"></i></span>
               </a>
@@ -377,14 +380,15 @@
                       <button class="btn btn-outline-secondary px-5">English</button>
                     </div>
                   </div>
-                  
-          </section>
+                  </div>
+                </div>
+              </div>
 
           <!-- fun facts -->
          
             <div class="col-12">
               <a href="#experience" class="d-flex gap-4 align-items-center next-chapter">
-                <span class="page">05/11</span>
+                <span class="page">03/05</span>
                 <span class="next">Next Chapter</span>
                 <span class="icon"><i class="ph ph-arrow-elbow-right-down"></i></span>
               </a>
@@ -402,9 +406,14 @@
                 <div class="experience-wrapper d-flex flex-column">
                   <!-- Experience Section -->
                   <div class="experience-item">
+                    <h5>(May 2025 - Present)</h5>
+                    <h3>Good Eggs — Warehouse Dispatcher</h3>
+                    <p>Started in warehouse operations and now work as a dispatcher. Since August 2026, I’ve also helped prepare delivery data for internal requests and supported connectivity troubleshooting with IT and engineering colleagues.</p>
+                  </div>
+                  <div class="experience-item">
                     <h5>(Jan 2024 - May 2024)</h5>
-                    <h3>Back-End Lead – StudentConnect</h3>
-                    <p>Designed and implemented the server-side architecture of StudentConnect, an online platform for student collaboration. Integrated AWS and MongoDB for scalable performance and developed RESTful APIs in Node.js and Express.js.</p>
+                    <h3>Back-End Lead – StudentConnect (Team)</h3>
+                    <p>Team project for student–teacher communication. Served as Back End Lead, developing the backend with Node.js, Express, and MongoDB. <a href="https://github.com/LucaT445/StudentConnect">View the team repository</a>.</p>
                   </div>
 
                   <div class="experience-item">
@@ -415,12 +424,13 @@
                   </div>
 
                   <div class="experience-item">
-                    <h5>(Nov 2024 - Nov 2025)</h5>
+                    <h5>(Jan 2025 - Nov 2025)</h5>
                     <h3>Lead Developer – NeuroLearn</h3>
                     <p>Built an interactive 3D neuroscience visualization tool in Python using Plotly and Trimesh. The project enables users to explore brain structures dynamically with real-time interactivity.</p>
                   </div>
 
           
+                </div>
                 <!-- Projects Section -->
                 <div class="project-wrapper mt-5">
                   <h3>Featured Projects</h3>
@@ -439,9 +449,32 @@
                           </div>
                           <div class="project-info">
                             <h2>NeuroLearn</h2>
-                            <p>Interactive Educational Brain Visualization Tool</p>
+                            <p>Explore brain anatomy through an interactive 3D model with region information and AI-assisted Q&amp;A.</p>
                             <div class="tags d-flex align-items-center gap-1">
                               <span>Python</span> - <span>Visualization</span> - <span>Interactive</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                      <a href="https://github.com/LucaT445/StudentConnect" target="_blank">
+                        <div class="single-project">
+                          <div class="project-card">
+                            <div class="card-inner"></div>
+                            <img src="./assets/images/connect.png" class="img-fluid w-100 card-img h-100" alt="StudentConnect team project"/>
+                            <div class="card-arrow">
+                              <div class="arrow-inner">
+                                <i class="ph ph-arrow-up-right"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="project-info">
+                            <h2>StudentConnect (Team)</h2>
+                            <p>Student–teacher communication platform built with a team. My role: Back End Lead.</p>
+                            <div class="tags d-flex align-items-center gap-1">
+                              <span>Team project</span> - <span>Backend</span>
                             </div>
                           </div>
                         </div>
@@ -476,28 +509,7 @@
                     </div>
 
 
-                    <div class="col-sm-6 col-lg-4">
-                      <a href="https://github.com/LucaT445/StudentConnect-solo" target="_blank" rel="noopener">
-                        <div class="single-project">
-                          <div class="project-card">
-                            <div class="card-inner"></div>
-                            <img src="./assets/images/connect.png" class="img-fluid w-100 card-img h-100" alt="StudentConnect Solo REST API Project"/>
-                            <div class="card-arrow">
-                              <div class="arrow-inner">
-                                <i class="ph ph-arrow-up-right"></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="project-info">
-                            <h2>StudentConnect (Solo)</h2>
-                            <p>RESTful API for student management with CRUD operations, schema validation, and consistent error handling</p>
-                            <div class="tags d-flex align-items-center gap-1">
-                              <span>REST API</span> - <span>Node.js</span> - <span>Express</span> - <span>MongoDB</span> 
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+
                   </div>
                 </div>
           
@@ -524,8 +536,6 @@
             </div>
           </section>
 
-            
-          </section>
 
           <!-- projects -->
       <!--   <section id="projects" class="projects section position-relative">
@@ -549,7 +559,7 @@
                     </div>
                     <div class="project-info">
                       <h2>NeuroLearn</h2>
-                      <p>Interactive Educational Brain Visualization Tool</p>
+                      <p>Explore brain anatomy through an interactive 3D model with region information and AI-assisted Q&amp;A.</p>
                       <div class="tags d-flex align-items-center gap-1">
                         <span>Python</span> - <span>Visualization</span> - <span>Interactive</span>
                       </div>
@@ -596,7 +606,7 @@
             <div class="more-info d-flex flex-wrap align-items-center gap-5 gap-md-3">
               <p>Need More info? Please Get in touch</p>
               <span class="line"></span>
-              <a href="#contact" class="arrow-down position-relative">
+              <a href="#contact" class="arrow-down position-relative" aria-label="Go to contact">
                 <div class="waves-top-md">
                   <span></span>
                   <span></span>
@@ -615,8 +625,6 @@
               </a>
             </div>
 
-            
-          </section>
 
           <section id="contact" class="contact section position-relative">
             <span class="section-title-overlay-text">contact</span>
@@ -632,7 +640,7 @@
                     <div class="icon-box">
                       <i class="ph ph-envelope-open"></i>
                     </div>
-                    <p>luca.thilgen@gmail.com</p>
+                    <p><a href="mailto:luca.thilgen@gmail.com">luca.thilgen@gmail.com</a></p>
                   </div>
                 </div>
           
@@ -641,32 +649,34 @@
                     <div class="icon-box">
                       <i class="ph ph-phone"></i>
                     </div>
-                    <p>415-265-2587</p>
+                    <p><a href="tel:4152652587">415-265-2587</a></p>
                   </div>
                 </div>
           
                 <div class="col-sm-12 col-xl-3 col-xxl-2 offset-xl-1">
                   <div class="social-icons d-flex align-items-center justify-content-center gap-3">
-                    <a href="https://github.com/LucaT445" target="_blank"><i class="ph ph-github-logo"></i></a>
-                    <a href="https://www.linkedin.com/in/luke-thilgen/" target="_blank"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/LucaT445" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="ph ph-github-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/luke-thilgen/" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i></a>
                   </div>
                 </div>
               </div>
             </div>
             <form id="contact-form" class="contact-form">
               <h4>Leave a Message</h4>
+              <p>You can also <a href="mailto:luca.thilgen@gmail.com">email me directly</a>.</p>
+              <p id="form-status" role="status" aria-live="polite"></p>
               <div class="row g-4 g-xl-5">
                 <div class="col-sm-6 contact-input">
-                  <label for="name">Name</label>
-                  <input type="text" id="user_name" name="user_name" placeholder="Your name" required />
+                  <label for="user_name">Name</label>
+                  <input autocomplete="name" type="text" id="user_name" name="user_name" placeholder="Your name" required />
                 </div>
                 <div class="col-sm-6 contact-input">
-                  <label for="email">Email</label>
-                  <input type="email" id="user_email" name="user_email" placeholder="Your e-mail" required />
+                  <label for="user_email">Email</label>
+                  <input autocomplete="email" type="email" id="user_email" name="user_email" placeholder="Your e-mail" required />
                 </div>
                 <div class="col-12 contact-input">
                   <label for="message">Message</label>
-                  <textarea id="message" name="message" placeholder="Your message"></textarea>
+                  <textarea required id="message" name="message" placeholder="Your message"></textarea>
                 </div>
                 <div class="col-12">
                   <button type="submit" id="submit-btn" class="submit-btn position-relative">
@@ -694,20 +704,20 @@
     </main>
     <!-- color switcher -->
     <div class="color-switcher">
-      <button class="color-switcher-btn">
+      <button class="color-switcher-btn" aria-label="Appearance settings">
         <i class="ph ph-gear-six"></i>
       </button>
       <div class="pallets d-flex flex-column align-items-center gap-4 justify-content-center">
         <div class="d-flex flex-column gap-3">
           <div class="d-flex gap-3">
-            <button style="background-color: #ffdb67" class="color-btn" data-color="255, 219, 103"></button>
-            <button style="background-color: #ff91fb" class="color-btn" data-color="255, 145, 251"></button>
-            <button style="background-color: #fdbb2e" class="color-btn" data-color="253, 187, 46"></button>
+            <button aria-label="Use accent color #ffdb67" style="background-color: #ffdb67" class="color-btn" data-color="255, 219, 103"></button>
+            <button aria-label="Use accent color #ff91fb" style="background-color: #ff91fb" class="color-btn" data-color="255, 145, 251"></button>
+            <button aria-label="Use accent color #fdbb2e" style="background-color: #fdbb2e" class="color-btn" data-color="253, 187, 46"></button>
           </div>
           <div class="d-flex gap-3">
-            <button style="background-color: #eee8aa" class="color-btn" data-color="238, 232, 170"></button>
-            <button style="background-color: #00ffff" class="color-btn" data-color="0, 255, 255"></button>
-            <button style="background-color: #00fe9c" class="color-btn" data-color="0, 254, 156"></button>
+            <button aria-label="Use accent color #eee8aa" style="background-color: #eee8aa" class="color-btn" data-color="238, 232, 170"></button>
+            <button aria-label="Use accent color #00ffff" style="background-color: #00ffff" class="color-btn" data-color="0, 255, 255"></button>
+            <button aria-label="Use accent color #00fe9c" style="background-color: #00fe9c" class="color-btn" data-color="0, 254, 156"></button>
           </div>
         </div>
         <div class="d-flex gap-3 justify-content-between">

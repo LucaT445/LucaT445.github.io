@@ -39332,3 +39332,20 @@ footer a {
   border: none;
   flex-shrink: 0
 }
+/* Portfolio fixes: retain the template's colors and layout. */
+html { overflow-x: clip; }
+.project-info .tags { flex-wrap: wrap; }
+.about-contact a { overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 10000; background: #fff; color: #000; padding: 12px; transform: translateY(-160%); }
+.skip-link:focus { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+/* The outer Bootstrap row uses negative gutters; contain it in the viewport. */
+main.container-fluid > .row { margin-inline: 0; }
+.hero-content .btn-outline-primary { color: rgb(var(--black)); border: 1px solid currentColor; }
+@media (max-width: 1199.98px) { .signature-logo { top: 48px !important; } }
